@@ -1,12 +1,15 @@
 import LinkedList from "./LinkedList.js";
 
 let mylist = new LinkedList()
-mylist.append("hello")
+mylist.append(1)
 mylist.append(2)
 mylist.append(3)
-mylist.append("wassup")
+mylist.append(4)
 mylist.append(5)
 mylist.prepend(0)
+mylist.insertAt(6,6)
+mylist.insertAt(-1,0)
+mylist.removeAt(2)
 console.log(mylist.toString())
 /*
 mylist.pop()

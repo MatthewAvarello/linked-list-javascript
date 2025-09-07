@@ -96,5 +96,47 @@ export default class LinkedList{
         }
         return null
     }
+    insertAt(value,index){
+        console.log(index)
+        if(!this.headnode || index == 0){
+            console.log(index)
+            this.prepend(value)
+            return
+        }
+        if(index == this.size()){
+            console.log(index)
+            this.append(value)
+            return
+        }
+        if(index > this.size() || 0 > index){
+            console.log(index)
+            console.error("Index out of bounds")
+            return
+        }
+        if(index <= this.size()){
+            console.log(index)
+            let oldnode = this.at(index)
+            let nodeinfront = this.at(index + 1)
+            let node = new Node(value,nodeinfront)
+            oldnode.nextNode = node
+        }
+    }
+    removeAt(index){
+        if(this.at(index) == this.tailnode){
+            this.pop()
+            return
+        }
+        if(index == 0){
+            if(!at(1)){
+                this.headnode = null
+                return
+            }
+            let theNextNode = at(1)
+            this.headnode = theNextNode
+        }
+        let previousnode = this.at(index - 1)
+        let nextnode = this.at(index + 1)
+        previousnode.nextNode = nextnode
+    }
 }
 // You need to set previous node nextnode property to appened node.
