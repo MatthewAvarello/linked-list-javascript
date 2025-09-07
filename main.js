@@ -1,0 +1,25 @@
+import LinkedList from "./LinkedList.js";
+
+let mylist = new LinkedList()
+mylist.append("hello")
+mylist.append(2)
+mylist.append(3)
+mylist.append("wassup")
+mylist.append(5)
+mylist.prepend(0)
+console.log(mylist.toString())
+/*
+mylist.pop()
+mylist.pop()
+mylist.pop()
+console.log("popping done")
+mylist.toString()
+console.log(mylist.contains(1))
+console.log(mylist.contains(67))
+console.log(mylist.find(2))
+console.log(mylist.find(1))
+console.log(mylist.find(17))*/
+//console.log(mylist.at(1))
+//console.log("Total size is: " + mylist.size())
+//console.log(mylist.head())
+//console.log(mylist.tail())
